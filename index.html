@@ -96,11 +96,34 @@
                                         </a>
                                     </li>
                                     <li class="navigation__item">
-                                        <!-- 加密的邮箱地址, 请自行修改, 或者改用下方的明文方式 -->
-                                        <a href="uibeyangming@hotmail.com" title="Email">
-                                        <!-- <a href="test@test.com" title="email"> -->
-                                            <i class='social iconfont icon-email'></i>
-                                            <span class="label">Email</span>
+    <!-- 加密的邮箱地址, 请自行修改, 或者改用下方的明文方式 -->
+    <a href="#" title="Email" onclick="copyEmail()">
+    <!-- <a href="test@test.com" title="email"> -->
+        <i class='social iconfont icon-email'></i>
+        <span class="label">Email</span>
+    </a>
+</li>
+
+<script>
+    // 定义一个函数，用于复制邮箱地址到剪切板
+    function copyEmail() {
+        // 创建一个临时的input元素，用于存储邮箱地址
+        var tempInput = document.createElement("input");
+        // 设置input元素的值为邮箱地址
+        tempInput.value = "uibeyangming@hotmail.com";
+        // 将input元素添加到文档中
+        document.body.appendChild(tempInput);
+        // 选中input元素的内容
+        tempInput.select();
+        // 复制选中的内容到剪切板
+        document.execCommand("copy");
+        // 从文档中移除input元素
+        document.body.removeChild(tempInput);
+        // 弹出一个提示框，显示邮箱地址已经复制到剪切板，欢迎与您取得联系
+        alert("邮箱地址已经复制到剪切板，欢迎与您取得联系");
+    }
+</script>
+
                                         </a>
                                     </li>
                                 </ul>
